@@ -17,6 +17,10 @@ private struct _PoolRedisClient {
 }
 
 extension _PoolRedisClient: RedisClient {
+    var isConnected: Bool {
+        true
+    }
+    
     var logger: Logger {
         self.pool.logger
     }
